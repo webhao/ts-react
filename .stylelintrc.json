@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "@gago/stylelint-config-scss"
+  ],
+  "ignoreFiles": [
+    "node_modules/**/*.css",
+    "node_modules/**/*.scss",
+    "node_modules/**/*.less",
+    "dist/**/*.css",
+    "**/*.tsx",
+    "**/*.html",
+    "**/*.md"
+  ]
+}

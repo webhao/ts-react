@@ -1,0 +1,11 @@
+{
+  "extends": "@gago/tslint-config-react",
+  "linterOptions": {
+    "exclude": [
+      "src/**/*.spec.ts",
+      "**/test/**.ts",
+      "**/*.d.ts",
+      "configs/**/*.ts"
+    ]
+  }
+}

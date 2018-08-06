@@ -1,0 +1,14 @@
+{
+  "editor.insertSpaces": true,
+  "editor.rulers": [
+    120,
+    140
+  ],
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "tslint.autoFixOnSave": true,
+  "cssModules.camelCase": true,
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false
+}
