@@ -14,8 +14,8 @@ interface ResponseData {
 }
 
 export class UserService {
-  static async login(username: string, password: string) {
-    return HttpClient.post<ResponseData>('/author/login', { username, password })
+  static async login(data: {username: string; password: string}) {
+    return HttpClient.post<ResponseData>('/author/login', data)
       .then(({ token }) => {
         UserStore.setToken(token);
       });
