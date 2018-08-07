@@ -1,23 +1,16 @@
-import React, { ReactNode, SFC } from 'react';
-import {
-  Route,
-  Redirect,
-  RouteProps,
-  RouteComponentProps,
-} from 'react-router-dom';
+import React, { Component } from 'react';
+import { Route, Redirect, RouteProps } from 'react-router-dom';
+import { observer } from 'mobx-react';
 
-type RouteComponent = RouteProps['component'];
-type RouteRender = RouteProps['render'];
+import UserStore from './user.store';
 
-function renderFactory(Component: RouteComponent): RouteRender {
-  return (props: RouteComponentProps<any>): ReactNode => {
-    if (!false || !Component) { // false 判断用户是否登录
-      return <Redirect to="login" />;
+@observer
+export class AuthorizedRoute extends Component<RouteProps> {
+  render() {
+    if (UserStore.isLogin) {
+      return <Route {...this.props} />;
     }
 
-    return <Component {...props} />;
-  };
+    return <Redirect to="login" />;
+  }
 }
-
-export const AuthorizedRoute: SFC<RouteProps>
-  = ({ component, ...rest }) => (<Route {...rest} render={renderFactory(component)} />);
