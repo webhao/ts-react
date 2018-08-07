@@ -1,5 +1,8 @@
 {
   "extends": "@gago/tslint-config-react",
+  "rules": {
+    "no-floating-promises": false
+  },
   "linterOptions": {
     "exclude": [
       "src/**/*.spec.ts",
