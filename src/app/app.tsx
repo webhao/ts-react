@@ -4,10 +4,13 @@ import {
   Route,
   Switch,
 } from 'react-router-dom';
+import { configure } from 'mobx';
 
 import { AuthorizedRoute } from './core/authorized-route';
 import { LoginComponent } from './core/login/login';
 import { HomeComponent } from './home/home';
+
+configure({ enforceActions: true });
 
 export const App: SFC = () => (
   <Router>
