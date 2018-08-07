@@ -6,8 +6,8 @@ export enum Env {
 }
 
 export const Config = {
-  devApiUrl: 'http://dev.gagogroup.cn/api',
-  prodApiUrl: 'http://prod.gagogroup.cn/api',
+  devApiUrl: 'https://agri3.gagogroup.cn/api',
+  prodApiUrl: 'https://agri3.gagogroup.cn/api',
   devPublicPath: '',
   prodPublicPath: 'assets',
 }
